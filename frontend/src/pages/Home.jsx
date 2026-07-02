@@ -28,7 +28,7 @@ export default function Home() {
 
             const fetchedPaintings = await paintingApi.getAllPaintings()
             if (fetchedPaintings) {
-                setPaintings(fetchedPaintings)
+                setPaintings(fetchedPaintings.paintings)
             }
         })()
     }, [])

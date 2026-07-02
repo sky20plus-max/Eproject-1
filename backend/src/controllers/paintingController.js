@@ -6,7 +6,7 @@ async function createPainting(req, res) {
             return res.status(400).json({message: 'You must choose a valid file to upload.'});
         }
 
-        const fileUrl = `/api/user/upload/${req.file.filename}`;
+        const fileUrl = `/api/upload/${req.file.filename}`;
 
         const newPainting = new Painting({
             user_id: req.user.user_id,
